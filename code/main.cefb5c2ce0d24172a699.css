@@ -1,0 +1,402 @@
+:root {
+  --GREEN: #9dbeb7;
+  --BASE: #efe6d5;
+  --RED: #e73213;
+  --GRAY: rgb(78, 78, 78);
+  --BLACK: #111111;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  width: 90vw;
+  margin-left: 5vw;
+  margin-top: 4vh;
+  -ms-flex-item-align: center;
+      align-self: center;
+  background-color: var(--BASE);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
+#current-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 40px;
+}
+
+.header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+
+.header-wrapper a {
+  color: var(--BLACK);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header-wrapper a:hover {
+  color: var(--RED);
+}
+
+button {
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 8px;
+  background-color: transparent;
+  border: 1px solid;
+}
+
+input {
+  height: 26px;
+}
+
+input[type="color"] {
+  position: relative;
+  top: 2px;
+  border: none;
+  width: 48px;
+  height: 26px;
+  border: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+
+.garage-container,
+.garage-container__page,
+.winner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.cars-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
+}
+
+.car-container__road-components {
+  padding-top: 50px;
+  border-bottom: 1px var(--BLACK) dashed;
+  width: 90vw;
+  position: relative;
+}
+
+.car-container__road-components .car-container__road {
+  position: relative;
+}
+
+.car-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6px;
+}
+
+.car-container .car-container__container-header,
+.car-container .car-container__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+}
+
+.car-container .car-container__buttons {
+  margin-left: -8px;
+}
+
+.settings-container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+
+.settings-container__garage-handler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.settings-container__garage-handler button {
+  padding: 4px 12px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.settings-container__garage-handler button:hover {
+  background-color: var(--BLACK);
+  color: var(--BASE);
+  border: 1px var(--BLACK) solid;
+}
+
+.settings {
+  gap: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.settings button {
+  border: 1px var(--BLACK) solid;
+  background-color: var(--BLACK);
+  color: var(--BASE);
+  width: 64px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.settings button:hover {
+  background-color: transparent;
+  color: var(--BLACK);
+}
+
+.page-buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.page-buttons-container button {
+  border: 1px var(--BLACK) solid;
+  background-color: var(--BLACK);
+  color: var(--BASE);
+  width: 64px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.page-buttons-container button:hover {
+  background-color: transparent;
+  color: var(--BLACK);
+}
+
+.car-container__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.car-container__buttons button {
+  border: none;
+}
+
+.car-container__buttons .car-container__separator {
+  height: 14px;
+  width: 1px;
+  background-color: var(--BLACK);
+}
+
+.car-container__car {
+  position: absolute;
+  bottom: 5px;
+  width: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.car-container__flag {
+  position: absolute;
+  right: 60px;
+  bottom: 5px;
+  height: 40px;
+}
+
+@-webkit-keyframes MoveRight {
+  from {
+    right: none;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes MoveRight {
+  from {
+    right: none;
+  }
+  to {
+    right: 0;
+  }
+}
+
+.move-right-animation {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: MoveRight;
+          animation-name: MoveRight;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.car-handler {
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: #ffffff;
+}
+
+.car-container__green {
+  background-color: var(--GREEN);
+  border: 0.5px solid var(--BLACK);
+}
+
+.car-container__red {
+  background-color: var(--RED);
+  border: 0.5px solid var(--BLACK);
+}
+
+.car-container__car-mechanics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.car-container__car-handler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+}
+
+.page-switch-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+
+.page-switch-container button {
+  font-size: 20px;
+  border: none;
+}
+
+.winner-message {
+  position: fixed;
+  z-index: 3;
+  width: 50vw;
+  margin-left: 15vw;
+  height: 50vh;
+  margin-top: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.winner-message h1 {
+  font-size: 4vw;
+}
+
+.winner-wrapper__title-container .table {
+  border: 1px solid var(--BLACK);
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.winner-wrapper__title-container .table th {
+  font-weight: bold;
+  padding: 5px;
+  background-color: var(--BLACK);
+  color: var(--BASE);
+  border: 1px solid var(--BLACK);
+}
+
+.winner-wrapper__title-container .table td {
+  padding: 5px 10px;
+  border: 1px solid var(--BLACK);
+  text-align: left;
+}
+
+.winner-wrapper__title-container .table tbody tr:nth-child(odd) {
+  background-color: var(--BASE);
+}
+
+.winner-wrapper__title-container .table tbody tr:nth-child(even) {
+  background-color: var(--BLACK);
+}
+
+.winner-wrapper__title-container th,
+.winner-wrapper__title-container td {
+  font-size: 2vw;
+}
+
+.winner-container__page,
+.winner-container__winner-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
